@@ -1,1 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabriel Teixeira da Silva — Portfólio de Redações</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- HERO -->
+  <header class="hero" id="inicio">
+    <p class="eyebrow">Concluinte do Ensino Médio · 2026</p>
+    <h1>Olá, eu sou <span>Gabriel Teixeira da Silva</span></h1>
+    <p class="hero-text">
+      Fiz este site no último ano do Ensino Médio, para a aula de Programação Web.
+      A ideia era simples: juntar as 15 redações que escrevi durante o ano e contar,
+      fase por fase, como cheguei até aqui — das primeiras letras na pré-escola às
+      aulas de redação do 3º ano, com as coisas que aprendi a fazer no caminho.
+    </p>
+    <blockquote>
+      “Descobri que escrever e programar se parecem mais do que eu imaginava: no começo
+      a página em branco assusta, depois você entende que tudo funciona quando cada parte
+      tem uma razão de estar ali. Fico com as duas coisas — e com a vontade de continuar
+      aprendendo.”
+    </blockquote>
+    <nav class="hero-nav">
+      <a href="#timeline">Memórias escolares</a>
+      <a href="#redacoes">Portfólio de redações</a>
+      <a href="#sobre">Sobre o projeto</a>
+    </nav>
+  </header>
+
+  <!-- TIMELINE -->
+  <section id="timeline" class="section">
+    <h2 class="section-title">Do Jardim de Infância ao 3º ano</h2>
+    <p class="section-sub">
+      Seis fases, uma foto reservada em cada uma e textos de exemplo prontos
+      para personalizar com os meus relatos, causos e desafios.
+    </p>
+    <span class="badge">6 fases</span>
+
+    <div class="timeline" id="timeline-container">
+      <!-- preenchido via JS -->
+    </div>
+  </section>
+
+  <!-- REDAÇÕES -->
+  <section id="redacoes" class="section section-alt">
+    <h2 class="section-title">As 15 redações, na íntegra</h2>
+    <p class="section-sub">
+      Clique em uma redação para abrir o texto completo aqui mesmo, sem sair da página.
+      Use a busca ou filtre por tema.
+    </p>
+
+    <div class="controls">
+      <input type="text" id="busca" placeholder="Buscar por título ou tema...">
+      <select id="filtro-tema">
+        <option value="Todas">Todas</option>
+        <option value="Tecnologia">Tecnologia</option>
+        <option value="Educação">Educação</option>
+        <option value="Meio Ambiente">Meio Ambiente</option>
+        <option value="Cidadania">Cidadania</option>
+        <option value="Saúde">Saúde</option>
+      </select>
+    </div>
+
+    <span class="badge" id="contador-redacoes">15 redações</span>
+
+    <div class="grid-redacoes" id="grid-redacoes"></div>
+
+    <p class="empty-msg" id="empty-msg" hidden>
+      <strong>Nenhuma redação encontrada.</strong><br>
+      Tente outra palavra-chave ou selecione o tema “Todas”.
+    </p>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <h2 class="section-title">Um site escrito à mão, em HTML, CSS e JavaScript</h2>
+    <p>
+      Escolhi fazer o site sobre as minhas redações porque foram a parte do 3º ano
+      que mais me fez crescer. Cada texto começou com uma folha em branco, um tema
+      da atualidade e a obrigação de defender uma ideia com argumento — não só com opinião.
+    </p>
+    <p>
+      No meio do caminho vieram as correções, os cortes e as reescritas. Vieram também
+      as aulas de Programação Web, onde aprendi que o HTML organiza, o CSS deixa legível
+      e o JavaScript faz a página responder. Este projeto juntou as duas coisas:
+      as redações viraram o conteúdo e o código virou a vitrine delas.
+    </p>
+    <p>
+      Montei tudo à mão, arquivo por arquivo, sem framework e sem biblioteca externa.
+      Ficou do jeito que eu queria: simples de ler, rápido no celular e fácil de manter —
+      cada fase da linha do tempo e cada redação tem o seu lugar marcado no código.
+    </p>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modal-close" aria-label="Fechar">&times;</button>
+      <h3 id="modal-titulo"></h3>
+      <p class="modal-tema" id="modal-tema"></p>
+      <div class="modal-texto" id="modal-texto"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p><strong>Gabriel Teixeira da Silva</strong> — Concluinte do Ensino Médio · 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
